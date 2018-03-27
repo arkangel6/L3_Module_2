@@ -17,12 +17,25 @@ public class SaveMessage {
 			String message = JOptionPane.showInputDialog("Enter something");
 			
 			char[] m = message.toCharArray();
+			char[] newM = new char[m.length];
+			int counter = 0;
 			for(char letter : m) {
-				letter = (char) (letter + 4);
+				int let = (int) letter;
+				
+				if(let + 5 > 122) {
+					newM[counter] = (char) ((let+4-122) + 97);
+					
+				}
+				else {
+				newM[counter] = (char) (let + 5);
+				}
+				counter++;
 			}
 				
-			String newMessage = Arrays.toString(m);
-			
+			String newMessage = "";
+			for(char x : newM) {
+				newMessage +="" + x;
+			}
 			
 			fw.write("\n" + newMessage);
 			
