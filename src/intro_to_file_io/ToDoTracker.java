@@ -153,7 +153,7 @@ public class ToDoTracker implements ActionListener {
 				
 				FileWriter fw;
 				try {
-					fw = new FileWriter("src/intro_to_file_io/file1.txt") ;
+					fw = new FileWriter("src/intro_to_file_io/file1.txt", true) ;
 					
 					String output = "";
 					

@@ -24,9 +24,6 @@ public class Copyright {
 							
 							
 							
-								
-							
-							
 							String output = "";
 								String line = br.readLine();
 								while(line != null) {
@@ -36,10 +33,7 @@ public class Copyright {
 								}
 								
 								br.close();
-							
-						
-						
-						
+								
 					
 						
 						FileWriter fw = new FileWriter("src/intro_to_file_io/" + files[i].getName());
